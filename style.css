@@ -1,0 +1,290 @@
+:root {
+    --n: #0f1c3f;
+    --b: #2563eb;
+    --g: #16a34a;
+    --r: #dc2626;
+    --bg: #f1f5f9
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: "Khmer UI","Leelawadee UI","Noto Sans Khmer","Segoe UI",sans-serif;
+    background: radial-gradient(#94a3b833 1.2px,transparent 1.2px) 0 0/24px 24px,radial-gradient(circle at 8% 6%,#dbeafe 0,transparent 38%),radial-gradient(circle at 95% 92%,#e0e7ff 0,transparent 38%),var(--bg);
+    background-attachment: fixed;
+    color: #1e293b;
+    font-size: 15px
+}
+
+#app {
+    display: flex;
+    min-height: 100vh
+}
+
+nav {
+    width: 230px;
+    background: linear-gradient(180deg,#16306b,#0f1c3f 55%,#0a1330);
+    color: #cbd5e1;
+    padding: 14px 8px;
+    flex-shrink: 0
+}
+
+nav h1 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0 8px 14px
+}
+
+nav a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px
+}
+
+nav a:hover,nav a.on {
+    background: #1e3a8a;
+    color: #fff
+}
+
+nav a.lo {
+    color: #fca5a5
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    min-width: 0
+}
+
+h2 {
+    margin: 0 0 14px
+}
+
+.card,.stat {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px #0001;
+    margin-bottom: 14px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 12px
+}
+
+.stat {
+    margin: 0;
+    border-left: 5px solid var(--b)
+}
+
+.stat small {
+    display: block;
+    color: #64748b;
+    font-size: 12px
+}
+
+.stat b {
+    font-size: 20px
+}
+
+.stat.g {
+    border-color: var(--g)
+}
+
+.stat.g b {
+    color: var(--g)
+}
+
+.stat.r {
+    border-color: var(--r)
+}
+
+.stat.r b {
+    color: var(--r)
+}
+
+.fg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 10px;
+    margin-bottom: 10px
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #475569
+}
+
+input,select,textarea {
+    width: 100%;
+    padding: 9px;
+    margin-top: 3px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit
+}
+
+.btn {
+    background: var(--b);
+    color: #fff;
+    border: 0;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+    margin: 4px 4px 4px 0
+}
+
+.btn.x {
+    background: #64748b
+}
+
+.btn.d {
+    background: var(--r)
+}
+
+.btn.s {
+    padding: 4px 9px;
+    font-size: 12px
+}
+
+.tw {
+    overflow-x: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px
+}
+
+th,td {
+    padding: 7px 8px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    white-space: nowrap
+}
+
+th {
+    background: #f8fafc
+}
+
+.pos {
+    color: var(--g);
+    font-weight: 600
+}
+
+.neg {
+    color: var(--r);
+    font-weight: 600
+}
+
+i.bar {
+    display: block;
+    height: 8px;
+    background: var(--g);
+    border-radius: 4px;
+    min-width: 2px
+}
+
+.login {
+    max-width: 380px;
+    margin: 8vh auto;
+    padding: 0 14px
+}
+
+.login .card {
+    padding: 24px
+}
+
+.ic {
+    font-size: 44px;
+    text-align: center
+}
+
+.note {
+    font-size: 12px;
+    color: #64748b
+}
+
+#t {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background: #0f172a;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    display: none
+}
+
+body:has(.login) {
+    background: radial-gradient(circle at 50% 40%,#1e40af 0,#0f1c3f 48%,#070d22 100%);
+    background-attachment: fixed
+}
+
+body:has(.login)::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.09'%3E%3Ccircle cx='400' cy='400' r='90'/%3E%3Ccircle cx='400' cy='400' r='170'/%3E%3Ccircle cx='400' cy='400' r='260'/%3E%3Ccircle cx='400' cy='400' r='360'/%3E%3Cpath d='M400 310L490 400M400 310L310 400M310 400L400 490M490 400L400 490M400 40V310M400 490V760M40 400H310M490 400H760'/%3E%3C/g%3E%3Ccircle cx='400' cy='400' r='40' fill='%2360a5fa' fill-opacity='.12'/%3E%3C/svg%3E") center/cover no-repeat
+}
+
+body:has(.login) .card {
+    box-shadow: 0 24px 60px #0009
+}
+
+@media(max-width: 760px) {
+    #app {
+        flex-direction:column
+    }
+
+    nav {
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px
+    }
+
+    nav h1 {
+        width: 100%
+    }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav i,
+.nav svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.nav.active {
+  background: #e8eeff;
+  color: #3457d5;
+  font-weight: 600;
+}
+
+.nav:hover {
+  background: #f0f4ff;
+}
